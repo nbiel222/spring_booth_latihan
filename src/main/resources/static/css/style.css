@@ -1,22 +1,22 @@
  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
 
         :root {
-            --color-bg: #FAF6F0;          /* Soft Cream Background */
-            --color-card-bg: #FFFFFF;     /* Pure White Card Background */
-            --color-primary: #8D5B4C;     /* Warm Cocoa Brown */
+            --color-bg: #FAF6F0;          
+            --color-card-bg: #FFFFFF;     
+            --color-primary: #8D5B4C;     
             --color-primary-hover: #734638;
-            --color-accent: #D4A373;      /* Honey/Wheat Gold */
+            --color-accent: #D4A373;    
             --color-accent-hover: #C59262;
-            --color-text-main: #3E2723;   /* Espresso Dark Brown for Text */
-            --color-text-muted: #7D6B60;  /* Latte Brown for Subtitles */
-            --color-border: #E6DCD3;      /* Soft Biscuit Border */
-            --color-error: #D32F2F;       /* Strawberry Red for Error Alert */
+            --color-text-main: #3E2723;   
+            --color-text-muted: #7D6B60; 
+            --color-border: #E6DCD3;      
+            --color-error: #D32F2F;     
             --font-main: 'Quicksand', system-ui, -apple-system, sans-serif;
             --shadow-soft: 0 8px 30px rgba(141, 91, 76, 0.08);
             --sidebar-width: 260px;
         }
 
-        /* --- Base Reset & General Styles --- */
+        
         * {
             box-sizing: border-box;
             margin: 0;
@@ -31,17 +31,16 @@
             min-height: 100vh;
         }
 
-        /* --- APP CONTAINER LAYOUT --- */
+      
         .app-container {
             display: flex;
             min-height: 100vh;
             flex-direction: row;
         }
 
-        /* --- SIDEBAR STYLE (Desktop: Left, Mobile: Top) --- */
         .sidebar {
             width: var(--sidebar-width);
-            background-color: #3E2723; /* Dark Espresso Brown */
+            background-color: #3E2723; 
             color: #FAF6F0;
             padding: 30px 20px;
             display: flex;
@@ -122,7 +121,7 @@
             background: none;
         }
 
-        /* --- MAIN CONTENT AREA --- */
+
         .main-content {
             flex-grow: 1;
             margin-left: var(--sidebar-width);
@@ -131,7 +130,6 @@
             max-width: 1200px;
         }
 
-        /* Khusus halaman login */
         .no-sidebar .sidebar {
             display: none !important;
         }
@@ -145,7 +143,6 @@
             min-height: 100vh;
         }
 
-        /* --- TYPOGRAPHY --- */
         h2 {
             font-weight: 700;
             color: var(--color-primary);
@@ -187,7 +184,7 @@
             color: var(--color-accent);
         }
 
-        /* --- STATS GRID --- */
+  
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -219,8 +216,6 @@
             letter-spacing: 1px;
             font-weight: 600;
         }
-
-        /* --- AKTIVITAS TERBARU (DASHBOARD) --- */
         .activity-card {
             background: white;
             padding: 30px;
@@ -292,7 +287,7 @@
             color: var(--color-text-muted);
         }
 
-        /* --- ACTIONS BAR (MANAJEMEN BARANG) --- */
+    
         .actions-bar {
             display: flex;
             justify-content: space-between;
@@ -333,7 +328,7 @@
             color: var(--color-primary);
         }
 
-        /* --- FORM STYLES --- */
+     
         form {
             background-color: var(--color-card-bg);
             padding: 35px;
@@ -392,7 +387,7 @@
             border-left: 4px solid var(--color-error);
         }
 
-        /* --- BUTTONS --- */
+ 
         button, .btn, button[type="submit"] {
             display: inline-block;
             width: 100%;
@@ -435,7 +430,7 @@
             color: var(--color-primary);
         }
 
-        /* --- TABLES --- */
+    
         .table-responsive {
             background-color: var(--color-card-bg);
             border-radius: 18px;
@@ -488,7 +483,7 @@
         .action-link.delete-btn { color: var(--color-error); }
         .action-link.delete-btn:hover { color: #B71C1C; text-decoration: underline; }
 
-        /* --- LOGIN CARD STYLE --- */
+    
         .login-card {
             background-color: var(--color-card-bg);
             width: 100%;
@@ -515,7 +510,7 @@
             margin-top: 0;
         }
 
-        /* --- RESPONSIVE STYLE (Sidebar di Atas ketika Mobile) --- */
+    
         @media (max-width: 768px) {
             .app-container {
                 flex-direction: column;
@@ -576,7 +571,7 @@
             }
         }
 
-        /* --- SWITCHING PAGES INTERACTION --- */
+     
         .page-section {
             display: none;
             animation: fadeIn 0.3s ease;
