@@ -1,43 +1,77 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Manajemen Barang</title>
-     <link rel="stylesheet" th:href="@{/css/style.css}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Barang - Bakery</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
 
-<h2>Manajemen Barang Bakery</h2>
+    <div class="app-container">
+        
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span>🥐</span>
+                <h2>Bakery Admin</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a th:href="@{/dashboard}" class="nav-item">
+                    <span>📊</span> Dashboard
+                </a>
+                <a th:href="@{/barang}" class="nav-item active">
+                    <span>📦</span> Barang
+                </a>
+                <a th:href="@{/logout}" class="nav-item logout-nav">
+                    <span>🚪</span> Keluar
+                </a>
+            </nav>
+        </aside>
 
-<a href="/dashboard">Kembali ke Dashboard</a> |
-<a href="/barang/tambah">Tambah Barang</a> |
-<a href="/logout">Logout</a>
+        <main class="main-content">
+            <h2>Manajemen Barang Bakery</h2>
+        
+            <div class="actions-bar">
+                <a th:href="@{/barang/tambah}" class="btn-action">
+                    <span>➕</span> Tambah Barang Baru
+                </a>
+            </div>
 
-<br><br>
 
-<table border="1" cellpadding="8">
-    <tr>
-        <th>Kode</th>
-        <th>Nama Barang</th>
-        <th>Kategori</th>
-        <th>Harga</th>
-        <th>Stok</th>
-        <th>Aksi</th>
-    </tr>
-
-    <tr th:each="barang : ${listBarang}">
-        <td th:text="${barang.kodeBarang}"></td>
-        <td th:text="${barang.namaBarang}"></td>
-        <td th:text="${barang.kategori}"></td>
-        <td th:text="${barang.harga}"></td>
-        <td th:text="${barang.stok}"></td>
-        <td>
-            <a th:href="@{/barang/edit/{kode}(kode=${barang.kodeBarang})}">Edit</a>
-            |
-            <a th:href="@{/barang/hapus/{kode}(kode=${barang.kodeBarang})}"
-               onclick="return confirm('Yakin ingin menghapus barang ini?')">Hapus</a>
-        </td>
-    </tr>
-</table>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kode</th>
+                            <th>Nama Barang</th>
+                            <th>Kategori</th>
+                            <th>Harga</th>
+                            <th>Stok</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Loop Data Barang dari Spring Boot Controller -->
+                        <tr th:each="barang : ${listBarang}">
+                            <td th:text="${barang.kodeBarang}"></td>
+                            <td th:text="${barang.namaBarang}"></td>
+                            <td th:text="${barang.kategori}"></td>
+                            <td th:text="${barang.harga}"></td>
+                            <td th:text="${barang.stok}"></td>
+                            <td>
+                                <a th:href="@{/barang/edit/{kode}(kode=${barang.kodeBarang})}" class="action-link edit-btn">Edit</a>
+                                <span style="color: var(--color-border);">|</span>
+                                <a th:href="@{/barang/hapus/{kode}(kode=${barang.kodeBarang})}" 
+                                   class="action-link delete-btn"
+                                   onclick="return confirm('Yakin ingin menghapus barang ini?')">Hapus</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        
+    </div>
 
 </body>
 </html>

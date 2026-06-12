@@ -5,14 +5,49 @@
           <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
+    <div class="app-container">
 
-    <h2> Dashboard Bakery </h2>
-    <p> Selamat Datang, <b th :text="${user.namaLengkap}"></b></p>
+        <aside class="sidebar">
+            <div class="sidebar-brand"><span>🥐</span><h2>Bakery Admin</h2></div>
+            <nav class="sidebar-nav">
+                <a href="/dashboard" class="nav-item active"><span>📊</span> Dashboard</a>
+                <a href="/barang" class="nav-item"><span>📦</span> Barang</a>
+                <a href="/logout" class="nav-item logout-nav"><span>🚪</span> Keluar</a>
+            </nav>
+        </aside>
 
-    <ul>
-        <li><a href="/barang">Manajemen Barang</a></li>
-        <li><a href="/logout">Logout</a></li>
-    </ul>
+        <main class="main-content">
+            <h2>Dashboard Bakery</h2>
+            <p>Selamat Datang, <b th:text="${user.namaLengkap}"></b></p>
 
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="number">12</span>
+                    <span class="label"> Pesanan</span>
+                </div>
+                <div class="stat-box" style="border-color: #FFCDD2;">
+                    <span class="number" style="color: #D32F2F;">8</span>
+                    <span class="label" style="color: #C62828;">Stok Tipis ⚠️</span>
+                </div>
+                <div class="stat-box">
+                    <span class="number">200jt</span>
+                    <span class="label">Pendapatan bulan ini</span>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <h3><span>🔔</span> Aktivitas Terbaru</h3>
+                <ul class="activity-list">
+                    <li class="activity-item">
+                        <span class="activity-icon">🍞</span>
+                        <div class="activity-details">
+                            <div class="activity-text">Sistem mendeteksi beberapa stok roti menipis.</div>
+                            <div class="activity-time">Baru saja</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
 </body>
 </html>

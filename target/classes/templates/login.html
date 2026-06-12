@@ -4,23 +4,23 @@
     <title>Login - Bakery</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
-<body class="login-page">
-
-<div class="login-card">
-    <h2>Bakery 🥐</h2>
-
-    <p style="color: red;" th:if="${error}" th:text="${error}"></p>
-
-    <form action="/login" method="post">
-        <label>Username</label><br>
-        <input type="text" name="username" placeholder="Masukkan username">
-
-        <label>Password</label><br>
-        <input type="password" name="password" placeholder="Masukkan password">
-
-        <button type="submit" class="btn">Login</button>
-    </form>
-</div>
+<body class="no-sidebar">
+    <div class="app-container">
+        <main class="main-content">
+            <div class="login-card">
+                <h2>Bakery 🥐</h2>
+                <p class="error-message" th:if="${error}" th:text="${error}"></p>
+                <form action="/login" method="post">
+                    <label>Username</label>
+                    <input type="text" name="username" placeholder="Masukkan username">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Masukkan password">
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
 
 </body>
 </html>

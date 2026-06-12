@@ -13,8 +13,11 @@ public class BarangRepository {
     private final List<Barang> daftarBarang = new ArrayList<>();
 
     public BarangRepository() {
-        daftarBarang.add(new Barang("ELK001", "Mouse Wireless", "Aksesoris", 150000, 20));
-        daftarBarang.add(new Barang("ELK002", "Keyboard Mechanical", "Aksesoris", 450000, 10));
+        daftarBarang.add(new Barang("PAS-001", "Croissant Original", "Pastry", 20.000, 20));
+        daftarBarang.add(new Barang("CAK-002", "Cheesecake Slice", "Cake", 25.000, 30));
+        daftarBarang.add(new Barang("CAK-003", "Red Velvet Cake", "Cake", 30.000, 25));
+        daftarBarang.add(new Barang("PAS-003", "Almond Croissant", "Pastry", 20.000, 20));
+        daftarBarang.add(new Barang("CKI-002", "Kastengel Keju 500g", "Cookies", 90.0000, 30));
     }
 
     public List<Barang> findAll() {
