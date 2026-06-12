@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Manajemen Barang</title>
+     <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<h2>Manajemen Barang Bakery</h2>
+
+<a href="/dashboard">Kembali ke Dashboard</a> |
+<a href="/barang/tambah">Tambah Barang</a> |
+<a href="/logout">Logout</a>
+
+<br><br>
+
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Kode</th>
+        <th>Nama Barang</th>
+        <th>Kategori</th>
+        <th>Harga</th>
+        <th>Stok</th>
+        <th>Aksi</th>
+    </tr>
+
+    <tr th:each="barang : ${listBarang}">
+        <td th:text="${barang.kodeBarang}"></td>
+        <td th:text="${barang.namaBarang}"></td>
+        <td th:text="${barang.kategori}"></td>
+        <td th:text="${barang.harga}"></td>
+        <td th:text="${barang.stok}"></td>
+        <td>
+            <a th:href="@{/barang/edit/{kode}(kode=${barang.kodeBarang})}">Edit</a>
+            |
+            <a th:href="@{/barang/hapus/{kode}(kode=${barang.kodeBarang})}"
+               onclick="return confirm('Yakin ingin menghapus barang ini?')">Hapus</a>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

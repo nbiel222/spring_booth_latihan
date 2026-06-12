@@ -1,0 +1,10 @@
+C:\temp\bakery\src\main\java\com\pbo2\bakery\BakeryApplication.java
+C:\temp\bakery\src\main\java\com\pbo2\bakery\controller\AuthController.java
+C:\temp\bakery\src\main\java\com\pbo2\bakery\controller\BarangController.java
+C:\temp\bakery\src\main\java\com\pbo2\bakery\controller\DashboardController.java
+C:\temp\bakery\src\main\java\com\pbo2\bakery\model\Barang.java
+C:\temp\bakery\src\main\java\com\pbo2\bakery\model\User.java
+C:\temp\bakery\src\main\java\com\pbo2\bakery\repository\BarangRepository.java
+C:\temp\bakery\src\main\java\com\pbo2\bakery\repository\UserRepository.java
+C:\temp\bakery\src\main\java\com\pbo2\bakery\service\AuthService.java
+C:\temp\bakery\src\main\java\com\pbo2\bakery\service\BarangService.java

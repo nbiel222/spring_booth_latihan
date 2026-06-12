@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login - Bakery</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="login-page">
+
+<div class="login-card">
+    <h2>Bakery 🥐</h2>
+
+    <p style="color: red;" th:if="${error}" th:text="${error}"></p>
+
+    <form action="/login" method="post">
+        <label>Username</label><br>
+        <input type="text" name="username" placeholder="Masukkan username">
+
+        <label>Password</label><br>
+        <input type="password" name="password" placeholder="Masukkan password">
+
+        <button type="submit" class="btn">Login</button>
+    </form>
+</div>
+
+</body>
+</html>

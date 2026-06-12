@@ -1,0 +1,10 @@
+com\pbo2\bakery\repository\UserRepository.class
+com\pbo2\bakery\controller\DashboardController.class
+com\pbo2\bakery\model\Barang.class
+com\pbo2\bakery\service\AuthService.class
+com\pbo2\bakery\controller\AuthController.class
+com\pbo2\bakery\model\User.class
+com\pbo2\bakery\repository\BarangRepository.class
+com\pbo2\bakery\controller\BarangController.class
+com\pbo2\bakery\service\BarangService.class
+com\pbo2\bakery\BakeryApplication.class
